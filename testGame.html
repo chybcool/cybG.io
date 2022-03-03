@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+</head>  
+<body> 
+
+    <div align='center'>  
+        <input type="button" onclick="test()" value="点击下载" class="btn">
+    <div>  
+</body>
+<style>
+        body {
+            font-size: 50px;
+            margin-top:100px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+        }
+        .btn {
+        	width:150px;
+        	height: 50px;
+        	font-size: 16px;
+        	color: #fff;
+        	background: #28abde;
+        	border-radius: 5px;
+        	position: absolute;
+        	top: 50px;
+        	left: 30%;
+        }
+    </style>
+
+<script>
+	function test(){
+		//判断iPhone | iPad | iPod | iOS | Android客户端
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  
+			    //判断iPhone|iPad|iPod|iOS    
+			    //alert(navigator.userAgent)
+			    window.location.href ="itms-services://?action=download-manifest&url=https://example.com/manifest.plist"
+			} else if (/(Android)/i.test(navigator.userAgent)) {   
+			    //判断Android    
+			    //alert(navigator.userAgent)
+			    window.location.href ="http://www.linkwind.cc/uploads/soft/200319/1-2003191S646.zip"
+			}
+	}
+</script>  
+</html>
